@@ -20,7 +20,7 @@ try:
     input3.send_keys("Smolensk")
     input4 = driver.find_element(By.ID, "country")
     input4.send_keys("Russia")
-    button = driver.find_element_by(By.CSS_SELECTOR, "button.btn")
+    button = driver.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
 
 finally:
