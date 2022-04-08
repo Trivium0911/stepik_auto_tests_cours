@@ -1,14 +1,15 @@
 from selenium import webdriver
 import time
+from selenium.webdriver.common.by import By
 
 try:
     browser = webdriver.Chrome()
     browser.get("http://suninjuly.github.io/huge_form.html")
-    elements = browser.find_elements_by_tag_name("input")
+    elements = browser.find_elements(By.TAG_NAME, "input")
     for element in elements:
-        element.send_keys("Слава Украине")
+        element.send_keys("Пиво")
 
-    button = browser.find_element_by_css_selector("button.btn")
+    button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
 
 finally:
