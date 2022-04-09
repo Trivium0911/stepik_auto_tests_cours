@@ -7,7 +7,6 @@ try:
     link = "http://suninjuly.github.io/registration1.html"
     browser = webdriver.Chrome()
     browser.get(link)
-
     element_first = browser.find_element(By.XPATH, "/html/body/div/form/div[1]/div[1]/input")
     element_first.send_keys("Пиво")
     element_second = browser.find_element(By.XPATH, "/html/body/div/form/div[1]/div[2]/input")
