@@ -14,10 +14,10 @@ try:
     element_second.send_keys("Пиво")
     element_mail = browser.find_element(By.XPATH, "/html/body/div/form/div[1]/div[3]/input")
     element_mail.send_keys("Пиво")
-    button = browser.find_element(by=By.CSS_SELECTOR, value="body > div > form > button")
+    button = browser.find_element(By.CSS_SELECTOR, "body > div > form > button")
     button.click()
     time.sleep(1)
-    welcome_text_elt = browser.find_element(by=By.CSS_SELECTOR, value="body > div > h1")
+    welcome_text_elt = browser.find_element(By.CSS_SELECTOR, "body > div > h1")
     welcome_text = welcome_text_elt.text
     assert "Congratulations! You have successfully registered!" == welcome_text
 finally:
